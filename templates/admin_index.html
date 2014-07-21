@@ -1,0 +1,8 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div class="common_content">
+    {% for entry in entries %}
+    <h4>{{entry}}</h4>
+    {% endfor %}
+</div>
+{% endblock %}

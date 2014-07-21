@@ -1,0 +1,45 @@
+﻿    {% extends "layout.html" %}
+    {% block content %}
+    <div class="common_content" >
+        <form action="" method="post" name="upload" enctype=multipart/form-data>
+            <table align="center">
+                <tr>
+                    <td colspan="2"><h1 align="center">Submin your homework</h1></td>
+                </tr>
+                <tr>
+                    <td><h2>Name</h2></td>
+                    <td>{{form.name(size=60)}}</td>
+                </tr>
+                <tr>
+                    <td><h2>Subject</h2></td>
+                    <td>
+                        <select name="subject">
+                            {% for subfield in form.subject %}
+                            <option>{{subfield.label}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h2>Homework No.</h2></td>
+                    <td>
+                        <select name="homework">
+                            {% for subfield in form.homework %}
+                            <option>{{subfield.label}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr >
+                    <td><h2>File</h2></td>
+                    <td>{{form.file}}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><p align="center"><input type=submit value=Submit></p></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    {% endblock %}
+
