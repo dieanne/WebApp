@@ -19,5 +19,5 @@ oauth2==1.5.211
 passlib==1.6.2
 SQLAlchemy==0.9.6
 urllib3==1.9
-Werkzeug==0.9.6
+Werkzeug==0.15.3
 WTForms==1.0.5
